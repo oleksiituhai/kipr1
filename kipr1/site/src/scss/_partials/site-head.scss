@@ -1,0 +1,30 @@
+$bp-site-head: 600px;
+
+.site-head {
+  --site-head-flex-basis: 100%;
+  --site-head-margin-top: 1rem;
+}
+
+@media (min-width: $bp-site-head) {
+  .site-head > * {
+    --site-head-flex-basis: 0;
+    --site-head-margin-top: 0;
+  }
+}
+
+.site-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  margin: 0.5rem 0;
+  flex-wrap: wrap;
+}
+
+.site-head > * {
+  flex-basis: var(--site-head-flex-basis);
+}
+
+.site-head > * + * {
+  margin-top: var(--site-head-margin-top);
+}

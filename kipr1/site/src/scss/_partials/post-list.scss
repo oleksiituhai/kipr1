@@ -1,0 +1,38 @@
+.post-list > * {
+  max-width: 60ch;
+}
+
+.post-list > * + * {
+  margin-top: 2rem;
+}
+
+.post-intro {
+  padding: 3rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.post-intro > * + * {
+  margin-top: 1rem;
+}
+
+.post-description {
+  font-weight: bold;
+  font-size: $SCALE-1;
+}
+
+.post-meta {
+  color: $COLOR_MID;
+  font-size: $SCALE--1;
+}
+
+.read-more {
+  text-decoration: underline;
+  font-size: $SCALE--1;
+}
+.read-more:hover,
+.read-more:focus {
+  text-decoration: none;
+}

@@ -1,0 +1,16 @@
+.login {
+  display: flex;
+  align-items: center;
+}
+
+.login > * {
+  margin-left: 0.5rem;
+  flex-basis: 2ch;
+  width: 2ch;
+  height: 2ch;
+}
+
+.login-button {
+  display: flex;
+  justify-content: space-between;
+}

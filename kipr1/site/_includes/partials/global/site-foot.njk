@@ -1,0 +1,24 @@
+<footer role="contentinfo">
+  <div class="theme-secondary theme-bg theme-color">
+    <div class="container">
+      <div class="site-footer">
+        <div class="site-footer-split">
+          <div class="stack">
+            <div class="site-name site-name--footer">
+              {% include "partials/icons/logo.svg" %}
+              <div class="site-titles">{{ site.name }}</div>
+            </div>
+            {% if site.shortDesc %}
+              <p>{{ site.shortDesc }}</p>
+            {% endif %}
+          </div>
+          <div class="footer-nav">
+            {% set navLocation = 'footer' %}
+            {% include "partials/nav.njk" %}
+          </div>
+        </div>
+        <p class="powered-by">Made by {{site.authorName}} with 11ty and Keystone</p>
+      </div>
+    </div>
+  </div>
+</footer>

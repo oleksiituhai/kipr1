@@ -1,0 +1,31 @@
+// These class to style body content generated in markdown
+// They are technically theme classes and break with the style architecture - but we can't control markdown
+.page .stack > p > img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.page .stack > img,
+.page .stack > pre,
+.page .stack > table,
+.page .stack > ol,
+.page .stack > blockquote {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.page .stack > ul {
+  margin-bottom: 2rem;
+}
+
+.stack > h1,
+.stack > h2,
+.stack > h3,
+.stack > h4,
+.stack > h5,
+.stack > .h1,
+.stack > .h2,
+.stack > .h3,
+.stack > .h4,
+.stack > .h5 {
+  margin-top: 2rem;
+}

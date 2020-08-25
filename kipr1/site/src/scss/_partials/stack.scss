@@ -1,0 +1,12 @@
+
+.stack {
+  display: block;
+}
+
+.stack > * + * {
+  margin-top: 1rem;
+}
+
+.stack--large > * + * {
+  margin-top: 2rem;
+}

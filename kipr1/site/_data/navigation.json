@@ -1,0 +1,23 @@
+{
+  "items": [{
+          "text": "Главная",
+          "url": "/",
+          "external": false
+      },
+      {
+          "text": "Каталог",
+          "url": "/catalog/",
+          "external": false
+      },
+      {
+          "text": "О компании",
+          "url": "/about/",
+          "external": false
+      },
+      {
+          "text": "Блог",
+          "url": "/posts/",
+          "external": false
+      }
+  ]
+}

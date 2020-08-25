@@ -1,0 +1,37 @@
+@import "./_partials/variables.scss";
+
+.comment-name {
+  display: flex;
+  align-items: center;
+}
+
+.comment-name > * + * {
+  margin-left: 1rem;
+}
+
+.keystone-comments {
+  list-style: none;
+}
+
+.keystone-comments > * + * {
+  margin-top: 1rem;
+}
+
+.keystone-comment {
+  border: solid 1px $COLOR_LIGHT;
+  padding: 1rem;
+}
+
+.comment-date {
+  color: $COLOR_MID;
+  font-size: $SCALE--1;
+}
+
+.comment-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.js-keystone-comment-form > * + * {
+  margin-top: 1rem;
+}

@@ -1,0 +1,57 @@
+{% extends 'layouts/base.njk' %}
+
+{% set authorName = author if author else 
+  site.authorName %}
+{% set introSummary %}
+<div class="stack">
+  {% if description %}
+    <p class="post-description">{{ description | safe }}</p>
+  {% endif %}
+  <p class="post-meta">
+    {% if date %}
+      Posted by {{ authorName }}
+      on <time datetime="{{ date | w3DateFilter }}" class="dt-published">{{ date | dateFilter }}</time>
+    {% endif %} (about a {{ helpers.getReadingTime(content) }} minute read).
+  </p>
+</div>
+{% endset %}
+
+{% block content %}
+  <div class="stack">
+    <article class="entry page" class="container">
+      <div class="stack stack--large">
+        {% include "partials/post-intro.njk" %}
+        <div class="container measure">
+          <div class="stack" >
+            {{ content | safe }}
+          </div>
+        </div>
+      </div>
+    </article>
+    <div class="container">
+      <footer class="stack">
+        {% if tags %}
+          <h2>Tags</h2>
+        {% endif %}
+        <div class="post-footer">
+          {% if tags %}
+            <ul class="post-tags">
+              {% for item in tags %}
+                <li>
+                  <a class="post-tag" href="/tags/{{ item | slugifyFilter }}">{{ item }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          <div class="stack">
+            {% include "partials/services/keystone-claps.njk" %}
+            {% include "partials/services/keystone-bookmarks.njk" %}
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div class="container measure">
+      {% include "partials/services/keystone-comments.njk" %}
+    </div>
+  </div>
+{% endblock %}

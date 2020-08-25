@@ -1,0 +1,10 @@
+<div class="theme-secondary theme-bg theme-color">
+  <header class="container">
+    <div class="jumbo">
+      <h1>{{ introHeading }}</h1>
+      {% if introSummary %}
+        <div class="stack measure">{{ introSummary | safe }}</div>
+      {% endif %}
+    </div>
+  </header>
+</div>
